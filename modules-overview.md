@@ -40,26 +40,23 @@ For **all six** tasks, you can start from a selected template repo on Gitea.
 
 The available template repos:
 
-- react-app
-- react-ts-app
-- vue-app
-- vue-ts-app
-- node-app
-- node-ts-app
-- laravel-app
-- vanilla-js-app
-- angular-app
-
-The Gitea service is available at the following address: [https://git.sfc.skillsit.eu](https://gitea.sfc.skillsit.eu)
+- react
+- react-ts
+- vue
+- vue-ts
+- node
+- node-ts
+- laravel
+- vanilla-js
+- node-ts-prisma
 
 To log in, you must use the username and password (a 4-digit PIN code) you have been given.
 After logging in, create a new repo for the next task.
 
-- In the Owner field, select `competitors` team! **Make sure you set this option carefully because if you set your own user as the owner, the automatic deployment will not work!**
-- Give the name of the new repo using the following pattern: `module-X-Y`, where `X` is the module letter, and `Y` is your workstation number. **Make sure you set the repo's name carefully because if you make a mistake, the automatic deployment will not work!** _(Example: module-a-1)_
-- Under the template field, select the appropriate template (e.g. `react-ts-app`). Select `Git Content (Default Branch)` for `Template Items`.
+- Give the name of the new repo using the following pattern: `module-Y`, where `Y` is the module's letter (eg. `module-a`, `module-b`). **Make sure you set the repo's name carefully because if you make a mistake, the automatic deployment will not work!**
+- Under the template field, select the appropriate template (e.g. `react-ts`). Select `Git Content (Default Branch)` for `Template Items`.
 
-Once the new repo is created, clone it to your own workstation inside the `c:\sfc2026-s17` folder.
+Once the new repo is created, clone it to your own workstation.
 
 ### Using npm modules
 
@@ -86,8 +83,12 @@ The Laravel project contains all the necessary files, so you will not need to `c
 
 ### Deployment
 
-When you commit and push your work, the deployment will start automatically. You can follow the process in the Gitea interface under the Action tab. Once the deployment is complete, your project will be available at `https://module-X-YYYY.sfc.skillsit.eu`, where `X` is the module letter and `YYYY` is your 4-digit PIN.
+When you commit and push your work, the deployment will start automatically. You can follow the process in the Gitea interface under the Action tab. Once the deployment is complete, your project will be available at https://cXX-YYYY-module-Z.sfc.skillsit.eu, where `X` is your workstation number, `YYYY` is your 4 digit pin, and `Z` is the module letter.
+
+Competitors can also check the container logs of their deployed projects at [https://logs.sfc.skillsit.eu/](https://logs.sfc.skillsit.eu/). To log in, use your PIN.
 
 ### Database access
 
-You will have your own database on the MySQL database server (`db.sfc.skillsit.eu`) available on the local network. You will need to use this database for development, and the same database will provide the data for your projects deployed to the server. A database dump will be provided to get the initial data. During the marking, the database will be restored to its original state using the same dump. Your backend solution (Module B) uses this database.
+You will have your own database on the MySQL database server (`db.sfc.skillsit.eu`) available on the local network. You will need to use this database for development, and the same database will provide the data for your projects deployed to the server. A database dump will be provided to get the initial data. During the marking, the database will be restored to its original state using the same dump. Your backend solution (Module C) uses this database.
+
+You can use PHPMyAdmin to manage your databases at [https://pma.sfc.skillsit.eu](https://pma.sfc.skillsit.eu). Log in with the same credentials you use for Gitea. The database naming convention is `cXX_module-y`, where `cXX` is your username and `y` is the module letter (e.g. `c07_module-c`).
