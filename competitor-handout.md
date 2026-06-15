@@ -6,6 +6,8 @@ You can solve the tasks by developing them on your own machine.
 
 ## Gitea, git
 
+The Gitea service is available at the following address: [https://git.sfc.skillsit.eu](https://git.sfc.skillsit.eu)
+
 For **all six** tasks, you can start from a selected template repo on Gitea.
 
 The available template repos:
