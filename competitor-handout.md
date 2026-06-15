@@ -1,40 +1,10 @@
-# Modules Overview
+# Competitor Handout
 
 **HRDK × SamsungSkills Invitational Friendly Challenge 2026**
 
-**06/20/2026 – 06/26/2026 | GIFTS (Global Institute for Transferring Skills HRDK), Incheon, Republic of Korea**
-
-This round has **six** separate tasks. Together they cover speed exercises, backend and frontend development, a client application, design implementation, and an AI project. See the linked module briefs for full requirements.
-
-**Schedule (excerpt)**
-
-| Day            | Module | Focus                                          |
-| -------------- | ------ | ---------------------------------------------- |
-| Mon 06/22 (C1) | **A**  | Speed test (HTML, CSS, JavaScript, TypeScript) |
-| Tue 06/23 (C2) | **B**  | Backend                                        |
-| Tue 06/23 (C2) | **C**  | Frontend                                       |
-| Wed 06/24 (C3) | **D**  | Client App                                     |
-| Wed 06/24 (C3) | **E**  | Design implementation                          |
-| Wed 06/24 (C3) | **F**  | AI Project (1h)                                |
-
-Full timings (briefings, lunch, marking) are in the [README](README.md).
-
----
-
-## Task descriptions (detail)
-
-- [Module A - Speed Test](module-a.md)
-- [Module B - Backend](module-b.md)
-- [Module C - Frontend](module-c.md)
-- [Module D - Client App](module-d.md)
-- [Module E - Design implementation](module-e.md)
-- [Module F - AI Project](module-f.md)
-
-## Technical Environment
-
 You can solve the tasks by developing them on your own machine.
 
-### Gitea, git
+## Gitea, git
 
 For **all six** tasks, you can start from a selected template repo on Gitea.
 
@@ -77,17 +47,17 @@ The available npm modules:
 - bootstrap
 - _and all the types (`@types/`) needed for the TS projects_
 
-### Laravel projects, composer install
+## Laravel projects, composer install
 
 The Laravel project contains all the necessary files, so you will not need to `composer install`. Your workstation has PHP 8 installed, so you can use the `php artisan` commands in the Laravel project.
 
-### Deployment
+## Deployment
 
 When you commit and push your work, the deployment will start automatically. You can follow the process in the Gitea interface under the Action tab. Once the deployment is complete, your project will be available at https://cXX-YYYY-module-Z.sfc.skillsit.eu, where `X` is your workstation number, `YYYY` is your 4 digit pin, and `Z` is the module letter.
 
 Competitors can also check the container logs of their deployed projects at [https://logs.sfc.skillsit.eu/](https://logs.sfc.skillsit.eu/). To log in, use your PIN.
 
-### Database access
+## Database access
 
 You will have your own database on the MySQL database server (`db.sfc.skillsit.eu`) available on the local network. You will need to use this database for development, and the same database will provide the data for your projects deployed to the server. A database dump will be provided to get the initial data. During the marking, the database will be restored to its original state using the same dump. Your backend solution (Module C) uses this database.
 

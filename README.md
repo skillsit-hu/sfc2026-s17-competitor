@@ -4,7 +4,6 @@
 
 ## Timetable
 
-
 | C-day  | Date     | Weekday       | Time          | Schedule                 | Venue                   |
 | ------ | -------- | ------------- | ------------- | ------------------------ | ----------------------- |
 | C-2    | 20-6     | Saturday      | Full day      | Arrival (Airport Pickup) | Incheon Airport - GIFTS |
@@ -43,14 +42,32 @@
 |        |          |               | 13:00 -       | Free Time                |                         |
 | C+1    | 26-6     | Friday        | Full day      | Free Time / Departure    | GIFTS - Incheon Airport |
 
-
 ## Test Project
 
-- [Overview](modules-overview.md)
+This competition has **six** separate tasks. Together they cover speed exercises, backend and frontend development, a client application, design implementation, and an AI project. See the linked module briefs for full requirements.
+
+**Schedule (excerpt)**
+
+| Day            | Module | Focus                                          |
+| -------------- | ------ | ---------------------------------------------- |
+| Mon 06/22 (C1) | **A**  | Speed test (HTML, CSS, JavaScript, TypeScript) |
+| Tue 06/23 (C2) | **B**  | Backend                                        |
+| Tue 06/23 (C2) | **C**  | Frontend                                       |
+| Wed 06/24 (C3) | **D**  | Client App                                     |
+| Wed 06/24 (C3) | **E**  | Design implementation                          |
+| Wed 06/24 (C3) | **F**  | AI Project (1h)                                |
+
+**Task descriptions (detail)**
+
 - [Module A - Speed Test](module-a.md)
 - [Module B - Backend](module-b.md)
-- [Module C - Frontend](module-c.md) 
+- [Module C - Frontend](module-c.md)
 - [Module D - Client App](module-d.md)
 - [Module E - Design implementation](module-e.md)
 - [Module F - AI Project](module-f.md)
 
+## Competitor Handout
+
+Practical setup for the competition: Gitea template repos and naming (`module-a` … `module-f`), cloning to your workstation, offline npm packages, Laravel/PHP, automatic deployment to `sfc.skillsit.eu`, container logs, and per-module MySQL databases (including phpMyAdmin).
+
+→ [Competitor Handout](competitor-handout.md)
