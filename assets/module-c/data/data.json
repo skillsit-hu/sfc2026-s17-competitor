@@ -1,0 +1,358 @@
+{
+  "organizations": [
+    {
+      "id": "dsal",
+      "name": "Labour Affairs Bureau (DSAL)",
+      "logo": "assets/org-dsal.png",
+      "shortIntro": "Leads Macau's WorldSkills delegation. Since 1985: 1 Gold, 3 Silver, 3 Bronze, and 50+ Medallions for Excellence",
+      "fullIntro": "The Labour Affairs Bureau (DSAL) is the Macau SAR government department responsible for labour policy. It has led Macau's delegation to the WorldSkills competition since 1985, with Macau competitors earning 1 Gold, 3 Silver, 3 Bronze, and over 50 Medallions for Excellence. DSAL also runs vocational training programmes for youth and working professionals."
+    },
+    {
+      "id": "dsedj",
+      "name": "Education and Youth Development Bureau (DSEDJ)",
+      "logo": "assets/org-dsedj.png",
+      "shortIntro": "Organises academic STEM competitions and funds students for national and international events",
+      "fullIntro": "The Education and Youth Development Bureau (DSEDJ) oversees non-tertiary education and youth development in Macau. It actively promotes STEM education and skills development, organising competitions such as the Innovation and Technology Elite Competition, and provides funding for Macau students to participate in national and international skills competitions."
+    },
+    {
+      "id": "cpttm",
+      "name": "Macau Productivity and Technology Transfer Centre (CPTTM)",
+      "logo": "assets/org-cpttm.png",
+      "shortIntro": "Promotes learning through competition: MOS, ACP, Mobile Web Contest, Huawei ICT Competition",
+      "fullIntro": "The Macau Productivity and Technology Transfer Centre (CPTTM) is a non-profit organisation jointly established by the Macau government and private sector, dedicated to IT training and skills development. CPTTM runs competitions including Microsoft Office Specialist (MOS), Adobe Certified Professional (ACP), the Macau Secondary School Mobile Web Design Competition, and the Huawei ICT Competition."
+    },
+    {
+      "id": "msc",
+      "name": "Macau Science Center (MSC)",
+      "logo": "assets/org-msc.png",
+      "shortIntro": "Hosts STEM competitions, exhibitions, workshops and family science activities",
+      "fullIntro": "The Macau Science Center, funded by the Macau Foundation, is dedicated to science education. It features exhibition halls, a planetarium, and a convention centre, regularly hosting STEM competitions, science exhibitions, and workshops in partnership with schools."
+    }
+  ],
+  "skills": [
+    {
+      "id": "web",
+      "name": "Web Technologies",
+      "icon": "assets/skill-web.svg",
+      "category": "Information Technology",
+      "shortIntro": "Front-end and back-end development covering HTML, CSS, JavaScript, PHP and frameworks",
+      "fullIntro": "Web Technologies is a core WorldSkills competition. Competitors must design and build responsive websites with front-end and back-end functionality, including database operations, API integration, and server-side programming. Macau's Leong Chi Tou earned a Medallion for Excellence at WorldSkills Lyon 2024."
+    },
+    {
+      "id": "security",
+      "name": "Cyber Security",
+      "icon": "assets/skill-security.svg",
+      "category": "Information Technology",
+      "shortIntro": "System hardening, vulnerability detection, digital forensics, and penetration testing",
+      "fullIntro": "The Cyber Security skill tests comprehensive information security capabilities including system hardening, malware analysis, digital forensics, and penetration testing."
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile Applications Development",
+      "icon": "assets/skill-mobile.svg",
+      "category": "Information Technology",
+      "shortIntro": "Design and development of iOS and Android mobile applications",
+      "fullIntro": "The Mobile Applications Development skill requires competitors to design and build cross-platform mobile apps covering UI/UX design, data storage, sensor integration, and network communication."
+    },
+    {
+      "id": "network",
+      "name": "Network Systems Administration",
+      "icon": "assets/skill-network.svg",
+      "category": "Information Technology",
+      "shortIntro": "Server administration, virtualisation, and IT system troubleshooting",
+      "fullIntro": "The Network Systems Administration skill requires Linux and Windows server management, network device configuration, virtualisation, and IT system troubleshooting."
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion Technology",
+      "icon": "assets/skill-fashion.svg",
+      "category": "Creative Design",
+      "shortIntro": "Garment design, pattern drafting, cutting and sewing",
+      "fullIntro": "The Fashion Technology skill tests pattern drafting, draping, sewing, and finishing according to design specifications within a time limit."
+    },
+    {
+      "id": "floristry",
+      "name": "Floristry",
+      "icon": "assets/skill-floristry.svg",
+      "category": "Creative Design",
+      "shortIntro": "Floral design, plant material handling and bouquet creation",
+      "fullIntro": "The Floristry skill tests plant knowledge, colour composition, and creative floral design through hand-tied bouquets, table arrangements, and spatial installations."
+    },
+    {
+      "id": "electrical",
+      "name": "Electrical Installations",
+      "icon": "assets/skill-electrical.svg",
+      "category": "Engineering",
+      "shortIntro": "Residential and industrial electrical wiring and fault diagnosis",
+      "fullIntro": "The Electrical Installations skill requires competitors to complete conduit installation, panel assembly, circuit connection, and fault detection using electrical drawings for both residential and industrial scenarios."
+    },
+    {
+      "id": "robot",
+      "name": "Mobile Robotics",
+      "icon": "assets/skill-robot.svg",
+      "category": "Engineering",
+      "shortIntro": "Robot design, assembly and programming",
+      "fullIntro": "The Mobile Robotics skill requires teams of two to assemble a mobile robot, calibrate sensors, and write control programmes to complete specified tasks. Macau's Chong Hio Keng won Silver in this skill at WorldSkills Kazan 2019."
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking (Western Cuisine)",
+      "icon": "assets/skill-cooking.svg",
+      "category": "Culinary",
+      "shortIntro": "Western cooking techniques including starters, mains and sauces",
+      "fullIntro": "The Cooking skill tests knife work, heat control, seasoning, and plating aesthetics through preparing specified dishes within a time limit."
+    },
+    {
+      "id": "bakery",
+      "name": "Bakery",
+      "icon": "assets/skill-bakery.svg",
+      "category": "Culinary",
+      "shortIntro": "Bread and pastry baking techniques",
+      "fullIntro": "The Bakery skill tests dough fermentation, shaping, temperature control, and product innovation in bread and pastry production."
+    },
+    {
+      "id": "hotel",
+      "name": "Hotel Reception",
+      "icon": "assets/skill-hotel.svg",
+      "category": "Hospitality",
+      "shortIntro": "Front desk operations, reservation systems and guest services",
+      "fullIntro": "The Hotel Reception skill simulates real front-desk scenarios, testing reservation handling, check-in/out, complaint resolution, tourist information, and English communication."
+    },
+    {
+      "id": "restaurant",
+      "name": "Restaurant Service",
+      "icon": "assets/skill-restaurant.svg",
+      "category": "Hospitality",
+      "shortIntro": "Food and beverage service, table setting and guest communication",
+      "fullIntro": "The Restaurant Service skill tests professional F&B service including table setting, food and wine pairing, tableside service, and guest communication."
+    }
+  ],
+  "competitions": [
+    {
+      "id": "ws48",
+      "name": "WorldSkills Shanghai 2026",
+      "coverImage": "assets/ws48/53985222102_9f1be7cc52_o.jpg",
+      "organizationId": "dsal",
+      "startDate": "2026-09-17",
+      "endDate": "2026-09-22",
+      "intro": "The world's largest skills competition, held every two years, bringing together young professionals from over 80 countries and regions. The 48th edition will be held in Shanghai — the first time WorldSkills takes place in China. Macau will send a delegation across multiple skills.",
+      "skillIds": [
+        "web",
+        "security",
+        "mobile",
+        "network",
+        "fashion",
+        "floristry",
+        "electrical",
+        "robot",
+        "cooking",
+        "hotel",
+        "restaurant"
+      ],
+      "createdAt": "2026-01-15T10:00:00Z",
+      "gallery": [
+        "assets/ws48/53985222102_9f1be7cc52_o.jpg",
+        "assets/ws48/53986406044_f3477e31df_o.jpg",
+        "assets/ws48/53986355413_1c10c2c39f_o.jpg",
+        "assets/ws48/53987242706_595b75835d_o.jpg",
+        "assets/ws48/DSC02428.jpg",
+        "assets/ws48/779852942.jpg",
+        "assets/ws48/53986137106_9fbe16e529_o.jpg",
+        "assets/ws48/53985241162_e3491e2523_o.jpg"
+      ]
+    },
+    {
+      "id": "phone-contest",
+      "name": "Macau Secondary School Mobile Web Design Competition",
+      "coverImage": "assets/phone-contest/2023_11_05_09_29_IMG_0837-1024x768.jpg",
+      "organizationId": "cpttm",
+      "startDate": "2025-10-25",
+      "endDate": "2025-10-25",
+      "intro": "A mobile web development competition for Macau secondary school students, aimed at cultivating interest and practical skills in web technologies. The competition has preliminary and final rounds where competitors design and build mobile websites on a given theme.",
+      "skillIds": [
+        "web",
+        "mobile"
+      ],
+      "createdAt": "2025-06-01T08:00:00Z"
+    },
+    {
+      "id": "innovation",
+      "name": "Innovation and Technology Elite Competition",
+      "coverImage": "assets/innovation/foto1.jpg",
+      "organizationId": "dsedj",
+      "startDate": "2024-11-01",
+      "endDate": "2024-11-30",
+      "intro": "An academic competition themed around innovative technology, encouraging students to apply robotics and STEM knowledge to solve real-world problems. Categories include robot programming, scientific inquiry, and innovation projects.",
+      "skillIds": [
+        "robot",
+        "electrical"
+      ],
+      "createdAt": "2024-08-20T09:00:00Z"
+    },
+    {
+      "id": "mso-contest",
+      "name": "Macau Student Office and Multimedia Design Software Competition",
+      "coverImage": "assets/mso-contest/mos-2026-final_EMs-724x1024.jpg",
+      "organizationId": "cpttm",
+      "startDate": "2026-05-01",
+      "endDate": "2026-08-31",
+      "intro": "An Office and multimedia design software competition for Macau students, organised by CPTTM. The competition covers Microsoft Office document processing, presentation design, and multimedia creation, encouraging students to master productivity and design software while developing digital skills and creative expression.",
+      "skillIds": [
+        "web",
+        "mobile"
+      ],
+      "createdAt": "2026-02-10T09:00:00Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "web-workshop",
+      "name": "Introduction to Web Development Workshop",
+      "organizationId": "cpttm",
+      "skillId": "web",
+      "type": "Workshop",
+      "date": "2026-08-15",
+      "startTime": "10:00",
+      "endTime": "13:00",
+      "location": "CPTTM Cyber-Lab",
+      "fee": "",
+      "intro": "A hands-on workshop covering HTML, CSS and basic JavaScript. Participants will build a simple personal website under instructor guidance. No prior experience required."
+    },
+    {
+      "id": "robot-day",
+      "name": "Robotics Programming Experience Day",
+      "organizationId": "dsedj",
+      "skillId": "robot",
+      "type": "Experience",
+      "date": "2026-08-22",
+      "startTime": "09:00",
+      "endTime": "12:00",
+      "location": "Macau Science Center",
+      "fee": "",
+      "intro": "Write robot control programmes and experience the excitement of robotics competition. Includes robot assembly, basic programming, and a mini-competition. Suitable for secondary school students."
+    },
+    {
+      "id": "ws-selection",
+      "name": "WorldSkills Selection Briefing",
+      "organizationId": "dsal",
+      "skillId": "web",
+      "type": "Selection Briefing",
+      "date": "2026-09-20",
+      "startTime": "15:00",
+      "endTime": "17:00",
+      "location": "DSAL Vocational Training Hall",
+      "fee": "",
+      "intro": "An information session covering the WorldSkills selection process, assessment criteria, and training programme timeline. Past Macau delegates will share their competition experience."
+    },
+    {
+      "id": "fashion-workshop",
+      "name": "Introduction to Fashion Technology",
+      "organizationId": "dsal",
+      "skillId": "fashion",
+      "type": "Experience",
+      "date": "2025-08-25",
+      "startTime": "14:00",
+      "endTime": "17:00",
+      "location": "Fashion Hub",
+      "fee": "",
+      "intro": "Learn basic sewing and pattern drafting techniques and complete a simple garment. Led by a professional fashion designer, covering fabric types, machine sewing, and garment construction."
+    },
+    {
+      "id": "cooking-demo",
+      "name": "Culinary Skills Demonstration",
+      "organizationId": "dsal",
+      "skillId": "cooking",
+      "type": "Experience",
+      "date": "2025-09-01",
+      "startTime": "10:00",
+      "endTime": "13:00",
+      "location": "Macau University of Tourism",
+      "fee": "",
+      "intro": "Professional chefs demonstrate Western cooking techniques with hands-on practice. Covers basic knife skills, sauce making, and plating. Suitable for beginners."
+    },
+    {
+      "id": "security-lecture",
+      "name": "Cybersecurity Trends Lecture",
+      "organizationId": "cpttm",
+      "skillId": "security",
+      "type": "Lecture",
+      "date": "2026-10-05",
+      "startTime": "14:00",
+      "endTime": "16:00",
+      "location": "CPTTM Conference Hall",
+      "fee": "",
+      "intro": "Industry experts share the latest cybersecurity threat trends and defence strategies, covering data protection, penetration testing practice, and career pathways. Suitable for young people interested in information security."
+    },
+    {
+      "id": "cooking-training",
+      "name": "Western Cuisine Training Course",
+      "organizationId": "dsal",
+      "skillId": "cooking",
+      "type": "Training",
+      "date": "2026-10-15",
+      "startTime": "10:00",
+      "endTime": "16:00",
+      "location": "Macau University of Tourism",
+      "fee": "MOP 200",
+      "intro": "A one-day Western cuisine training course where professional chefs teach knife skills, sauce making, heat control, and plating. Participants complete several specified dishes. Suitable for those aspiring to the culinary skills."
+    }
+  ],
+  "milestones": [
+    {
+      "year": 1985,
+      "title": "First WorldSkills Participation",
+      "description": "Macau sent its first delegation to the 29th WorldSkills Competition in Osaka, Japan, marking the beginning of Macau's involvement in international skills competitions.",
+      "image": "",
+      "competitionId": "ws48"
+    },
+    {
+      "year": 1996,
+      "title": "Vocational Training Committee Established",
+      "description": "The Macau government established a Vocational Training Committee to coordinate local skills training and competition affairs, laying the institutional foundation for future international participation.",
+      "image": "",
+      "competitionId": "ws48"
+    },
+    {
+      "year": 2001,
+      "title": "First Medal",
+      "description": "Macau won its first medal — a Bronze in Electrical Installations — at the 36th WorldSkills Competition in Seoul, South Korea.",
+      "image": "assets/ws48/medal1.jpg",
+      "competitionId": "ws48"
+    },
+    {
+      "year": 2011,
+      "title": "DSAL Takes Full Coordination",
+      "description": "The Labour Affairs Bureau became the official coordinating body for WorldSkills Macau, systematically organising competitor selection, training, and participation.",
+      "image": "assets/ws48/world_skill_org1.png",
+      "competitionId": "ws48"
+    },
+    {
+      "year": 2017,
+      "title": "First Gold Medal",
+      "description": "Fong Kin Wai won Macau's first Gold medal in Web Technologies at the 44th WorldSkills Competition in Abu Dhabi, UAE — a landmark achievement that inspired many young people in Macau to pursue skills training.",
+      "image": "assets/ws48/champion.png",
+      "competitionId": "ws48"
+    },
+    {
+      "year": 2019,
+      "title": "Silver in Mobile Robotics",
+      "description": "Chong Hio Keng won a Silver medal in Mobile Robotics at the 45th WorldSkills Competition in Kazan, Russia, showcasing Macau's growing strength in STEM fields.",
+      "image": "assets/ws48/activity2019.png",
+      "competitionId": "ws48"
+    },
+    {
+      "year": 2024,
+      "title": "WorldSkills Lyon 2024",
+      "description": "At the 47th WorldSkills Competition in Lyon, France, Leong Chi Tou earned a Medallion for Excellence in Web Technologies and was named Best of Nation for Macau. Macau's cumulative record reached 1 Gold, 3 Silver, 3 Bronze, and over 50 Medallions for Excellence.",
+      "image": "assets/ws48/LeongChiTouphoto.jpeg",
+      "competitionId": "ws48"
+    },
+    {
+      "year": 2026,
+      "title": "WorldSkills Shanghai 2026",
+      "description": "The 48th WorldSkills Competition will be held in Shanghai, China — the first time WorldSkills takes place in China. The Macau delegation is actively preparing to achieve new successes.",
+      "image": "assets/ws48/53986406044_f3477e31df_o.jpg",
+      "competitionId": "ws48"
+    }
+  ]
+}
