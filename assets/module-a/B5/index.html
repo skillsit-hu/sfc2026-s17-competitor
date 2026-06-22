@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building Floor Plan Pathfinder</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #eef1f5;
+    padding: 24px;
+    gap: 16px;
+  }
+
+  .panel {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(30, 41, 59, 0.08);
+    padding: 16px 24px;
+    width: 100%;
+    max-width: 540px;
+    font-size: 14px;
+    color: #334155;
+  }
+
+  .floor-plan {
+    position: relative;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(30, 41, 59, 0.08);
+    width: 540px;
+    height: 580px;
+  }
+
+  .corridor {
+    position: absolute;
+    background: #cbd5e1;
+    z-index: 0;
+  }
+
+  .corridor-label {
+    position: absolute;
+    font-size: 11px;
+    color: #94a3b8;
+    background: #ffffff;
+    padding: 0 4px;
+    z-index: 1;
+  }
+
+  .room {
+    position: absolute;
+    width: 80px;
+    height: 60px;
+    background: #f8f9fb;
+    border: 2px solid #94a3b8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #334155;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .room.start {
+    background: #4a78d4;
+    border-color: #4a78d4;
+    color: #ffffff;
+  }
+
+  .room.end {
+    background: #e0954f;
+    border-color: #e0954f;
+    color: #ffffff;
+  }
+
+  .corridor.on-path {
+    background: #4caf7d;
+  }
+
+  .corridor-label.on-path {
+    color: #2f8a5f;
+  }
+
+  .legend {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: #64748b;
+    align-items: center;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .legend-box {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    border: 2px solid;
+  }
+</style>
+</head>
+<body>
+
+  <div class="panel" id="result-panel">
+    Example: Room A &rarr; Room F selected. Shortest path: A - D - E - F (total distance 7)
+  </div>
+
+  <div class="floor-plan" id="floor-plan">
+
+    <!-- Row 1 horizontal corridors: A-B, B-C (y=70) -->
+    <div class="corridor" style="left:120px; top:67px; width:100px; height:6px;"></div>
+    <div class="corridor-label" style="left:160px; top:48px;">2</div>
+
+    <div class="corridor" style="left:300px; top:67px; width:100px; height:6px;"></div>
+    <div class="corridor-label" style="left:340px; top:48px;">4</div>
+
+    <!-- Row 2 horizontal corridors: D-E, E-F (y=290) -->
+    <div class="corridor on-path" style="left:120px; top:287px; width:100px; height:6px;"></div>
+    <div class="corridor-label on-path" style="left:160px; top:298px;">1</div>
+
+    <div class="corridor on-path" style="left:300px; top:287px; width:100px; height:6px;"></div>
+    <div class="corridor-label on-path" style="left:340px; top:298px;">3</div>
+
+    <!-- Row 3 horizontal corridor: H-G (y=510) -->
+    <div class="corridor" style="left:300px; top:507px; width:100px; height:6px;"></div>
+    <div class="corridor-label" style="left:340px; top:518px;">4</div>
+
+    <!-- Vertical corridors: A-D (x=80, distance 3) -->
+    <div class="corridor on-path" style="left:77px; top:100px; width:6px; height:160px;"></div>
+    <div class="corridor-label on-path" style="left:50px; top:175px;">3</div>
+
+    <!-- Vertical corridors: B-E (x=260, distance 5) -->
+    <div class="corridor" style="left:257px; top:100px; width:6px; height:160px;"></div>
+    <div class="corridor-label" style="left:270px; top:175px;">5</div>
+
+    <!-- Vertical corridors: C-F (x=440, distance 2) -->
+    <div class="corridor" style="left:437px; top:100px; width:6px; height:160px;"></div>
+    <div class="corridor-label" style="left:450px; top:175px;">2</div>
+
+    <!-- Vertical corridors: F-G (x=440, distance 1) -->
+    <div class="corridor" style="left:437px; top:320px; width:6px; height:160px;"></div>
+    <div class="corridor-label" style="left:450px; top:395px;">1</div>
+
+    <!-- Rooms: Row 1 (top=40) -->
+    <div class="room start" data-room="A" style="left:40px; top:40px;">A</div>
+    <div class="room" data-room="B" style="left:220px; top:40px;">B</div>
+    <div class="room" data-room="C" style="left:400px; top:40px;">C</div>
+
+    <!-- Rooms: Row 2 (top=260) -->
+    <div class="room" data-room="D" style="left:40px; top:260px;">D</div>
+    <div class="room" data-room="E" style="left:220px; top:260px;">E</div>
+    <div class="room end" data-room="F" style="left:400px; top:260px;">F</div>
+
+    <!-- Rooms: Row 3 (top=480) -->
+    <div class="room" data-room="H" style="left:220px; top:480px;">H</div>
+    <div class="room" data-room="G" style="left:400px; top:480px;">G</div>
+
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="legend-box" style="background:#4a78d4; border-color:#4a78d4;"></span>Start</div>
+    <div class="legend-item"><span class="legend-box" style="background:#e0954f; border-color:#e0954f;"></span>End</div>
+    <div class="legend-item"><span class="legend-box" style="background:#4caf7d; border-color:#4caf7d;"></span>Path</div>
+    <div class="legend-item"><span class="legend-box" style="background:#f8f9fb; border-color:#94a3b8;"></span>Room</div>
+  </div>
+
+  <script>
+    // TODO: implement room click selection and shortest path finding
+    // Connections (room - room : distance):
+    // A-B:2, B-C:4, A-D:3, B-E:5, C-F:2, D-E:1, E-F:3, F-G:1, G-H:4
+  </script>
+
+</body>
+</html>

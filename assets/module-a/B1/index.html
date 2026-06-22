@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POS Quantity & Price Calculator</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fdf6ec;
+    padding: 24px;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 380px;
+  }
+
+  .menu-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4a3528;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+
+  .card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(74, 53, 40, 0.08);
+    border-left: 5px solid var(--accent);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .product-info {
+    flex: 1;
+  }
+
+  .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3a2c20;
+    margin-bottom: 4px;
+  }
+
+  .unit-price {
+    font-size: 13px;
+    color: #9a8a7d;
+  }
+
+  .quantity-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .qty-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background: var(--accent);
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .qty-btn:hover {
+    opacity: 0.85;
+  }
+
+  .quantity-value {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 24px;
+    text-align: center;
+    color: #3a2c20;
+  }
+
+  .total-card {
+    background: #4a3528;
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+  }
+
+  .total-label {
+    font-size: 16px;
+    color: #f0e6da;
+  }
+
+  .total-value {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffd27f;
+  }
+</style>
+</head>
+<body>
+
+  <div class="menu-list">
+
+    <div class="menu-title">Corner Cafe Menu</div>
+
+    <div class="card" style="--accent:#c97b4a;">
+      <div class="product-info">
+        <div class="product-name">Iced Americano</div>
+        <div class="unit-price" data-price="3.50">Unit price: $3.50</div>
+      </div>
+      <div class="quantity-row">
+        <button class="qty-btn decrease-btn">-</button>
+        <div class="quantity-value">0</div>
+        <button class="qty-btn increase-btn">+</button>
+      </div>
+    </div>
+
+    <div class="card" style="--accent:#a9744f;">
+      <div class="product-info">
+        <div class="product-name">Caffe Latte</div>
+        <div class="unit-price" data-price="4.00">Unit price: $4.00</div>
+      </div>
+      <div class="quantity-row">
+        <button class="qty-btn decrease-btn">-</button>
+        <div class="quantity-value">0</div>
+        <button class="qty-btn increase-btn">+</button>
+      </div>
+    </div>
+
+    <div class="card" style="--accent:#e0a85f;">
+      <div class="product-info">
+        <div class="product-name">Croissant</div>
+        <div class="unit-price" data-price="2.75">Unit price: $2.75</div>
+      </div>
+      <div class="quantity-row">
+        <button class="qty-btn decrease-btn">-</button>
+        <div class="quantity-value">0</div>
+        <button class="qty-btn increase-btn">+</button>
+      </div>
+    </div>
+
+    <div class="card" style="--accent:#8a6fb0;">
+      <div class="product-info">
+        <div class="product-name">Blueberry Muffin</div>
+        <div class="unit-price" data-price="3.25">Unit price: $3.25</div>
+      </div>
+      <div class="quantity-row">
+        <button class="qty-btn decrease-btn">-</button>
+        <div class="quantity-value">0</div>
+        <button class="qty-btn increase-btn">+</button>
+      </div>
+    </div>
+
+    <div class="card" style="--accent:#e8a23a;">
+      <div class="product-info">
+        <div class="product-name">Orange Juice</div>
+        <div class="unit-price" data-price="4.50">Unit price: $4.50</div>
+      </div>
+      <div class="quantity-row">
+        <button class="qty-btn decrease-btn">-</button>
+        <div class="quantity-value">0</div>
+        <button class="qty-btn increase-btn">+</button>
+      </div>
+    </div>
+
+    <div class="total-card">
+      <span class="total-label">Total</span>
+      <span class="total-value" id="total-value">$0.00</span>
+    </div>
+
+  </div>
+
+  <script>
+    // TODO: implement quantity increase/decrease and total calculation
+  </script>
+
+</body>
+</html>
