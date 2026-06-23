@@ -1,0 +1,9 @@
+<svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#ffffff" stroke-width="2">
+    <rect x="25" y="25" width="30" height="30"></rect>
+    <path d="M40 25 L40 10"></path>
+    <path d="M40 55 L40 70"></path>
+    <path d="M80 40 L200 40"></path>
+    <text x="85" y="45" font-size="14" fill="#ffffff" font-family="Arial" letter-spacing="2">TERRAFORGE</text>
+  </g>
+</svg>

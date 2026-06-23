@@ -1,0 +1,20 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="moonGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e6e6e6"></stop>
+      <stop offset="70%" stop-color="#9aa0a6"></stop>
+      <stop offset="100%" stop-color="#2b2f36"></stop>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="60" cy="60" r="42" fill="url(#moonGrad)" filter="url(#glow)"></circle>
+  <circle cx="45" cy="55" r="6" fill="#6b6f76" opacity="0.5"></circle>
+  <circle cx="70" cy="70" r="10" fill="#5a5f66" opacity="0.4"></circle>
+  <circle cx="75" cy="45" r="5" fill="#7a7f86" opacity="0.4"></circle>
+</svg>

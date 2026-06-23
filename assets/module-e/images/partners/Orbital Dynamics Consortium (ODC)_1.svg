@@ -1,0 +1,8 @@
+<svg width="220" height="80" viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" stroke="#ffffff" stroke-width="2">
+    <circle cx="40" cy="40" r="18"></circle>
+    <circle cx="40" cy="40" r="28" opacity="0.4"></circle>
+    <path d="M70 40 L200 40"></path>
+    <text x="75" y="45" font-size="14" fill="#ffffff" font-family="Arial" letter-spacing="2">ODC</text>
+  </g>
+</svg>
