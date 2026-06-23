@@ -64,3 +64,23 @@ Competitors can also check the container logs of their deployed projects at [htt
 You will have your own database on the MySQL database server (`db.sfc.skillsit.eu`) available on the local network. You will need to use this database for development, and the same database will provide the data for your projects deployed to the server. A database dump will be provided to get the initial data. During the marking, the database will be restored to its original state using the same dump. Your backend solution (Module C) uses this database.
 
 You can use PHPMyAdmin to manage your databases at [https://pma.sfc.skillsit.eu](https://pma.sfc.skillsit.eu). Log in with the same credentials you use for Gitea. The database naming convention is `cXX_module-y`, where `cXX` is your username and `y` is the module letter (e.g. `c07_module-c`).
+
+## Prisma shadow database (`prisma migrate dev`)
+
+`prisma migrate dev` needs a temporary **shadow database** that Prisma can create and drop while diffing migrations. On the competition server you **cannot** create or drop databases, so you must point Prisma at an **existing** database instead.
+
+Use your **`module-f`** database as the shadow database (naming: `cXX_module-f`). Pick a module database you are not using for live data in the task you are working on; `module-f` is a practical default because Module F is short and does not use database.
+
+Add `shadowDatabaseUrl` to the `datasource` block in `schema.prisma` (replace `XX`, `YYYY`, and the module letter in `DATABASE_URL` with your own values):
+
+```prisma
+datasource db {
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = "mysql://cXX:YYYY@db.sfc.skillsit.eu:3306/cXX_module-f"
+}
+```
+
+Use the same username (`cXX`) and PIN (`YYYY`) as for your normal database connection. Only the database name at the end should differ from `DATABASE_URL` when you reuse `module-f` as the shadow DB.
+
+**Note:** `prisma migrate deploy` (used in production-style deploys) does not need a shadow database. This configuration is only required if you run `prisma migrate dev` locally during the competition.
